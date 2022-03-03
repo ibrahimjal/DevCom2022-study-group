@@ -5,6 +5,7 @@ checkBtn.addEventListener("click", () => {
     let text = input.value
 
     checkPalindrome(text)
+    text.value = " "
     
 })
 
@@ -28,4 +29,21 @@ function checkPalindrome(text){
    
     
 }
+
+// freeCodeCamp Challenge
+
+function isPalindrome(word){
+    let newWord = word.replace(/[^a-zA-Z0-9]/g, "").toLowerCase()
+    let checkWord = newWord.split("").reverse().join("")
+    console.log(newWord, checkWord)
+
+    if(newWord !== checkWord){
+        return false
+    }
+    return true
+}
+let result = isPalindrome("never-odd-or-even")
+console.log(result)
+
+// Challenge Successfully Passed
 
